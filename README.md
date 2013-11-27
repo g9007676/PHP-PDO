@@ -36,8 +36,6 @@ Learning PHP_PDO
     	define('POST', '3306');
     	define('HOST', 'localhost');
     	define('DBNAME', 'test_limit');
-
-
     	$db = new PDO ("mysql:dbname=".DBNAME.";host=".HOST.";port=3306",USERNAME, PASSWORD, array(  PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));
     	$sql = "SELECT * FROM `member_main` WHERE `mm_email` = ? and `mm_password` = ?";
     	$sth = $db->prepare($sql);
